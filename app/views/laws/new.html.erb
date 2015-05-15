@@ -1,0 +1,19 @@
+<div class="law-form">
+  <%= form_for(@law) do |f| %>
+    <div class="field">
+      <%= f.label :title %><br />
+      <%= f.text_field :title, autocomplete: "off" %>
+    </div>
+    <div class="field">
+      <%= f.label :content%><br />
+      <%= f.text_area :content, autocomplete: "off" %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+
+  <%= link_to root_path, class: "back" do %>
+    <i class="fa fa-arrow-left">Back</i>
+  <% end %>
+</div>

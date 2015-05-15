@@ -1,0 +1,21 @@
+<div class="search-result-page">
+  <table>
+    <tr>
+      <th class="title">Title</th>
+      <th class="content">Content</th>
+    </tr>
+
+    <% @laws.each_with_hit do |record, hit| %>
+      <tr class="list">
+        <td class="title"><%= hit.highlight.title ? (raw hit.highlight.title[0]) : record.title%></td>
+        <td class="content"><%= hit.highlight.content ? (raw hit.highlight.content[0]) : record.content %></td>
+        <td class="content"><%= record.content %></td>
+        <td class="content"><%= hit.highlight.content.length %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= link_to root_path, class: "back" do %>
+    <i class="fa fa-arrow-left"> Back</i>
+  <% end %>
+</div>

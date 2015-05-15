@@ -1,0 +1,132 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ */
+ * {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+ }
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+table {
+  margin-top: 50px;
+  width: 900px;
+  border-collapse: collapse;
+}
+th.title {
+  width: 100px;
+  text-align: center;
+}
+th.index {
+  width: 150px;
+}
+th.content {
+  width: 600px;
+}
+tr th{
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+tr td {
+  padding: 10px 20px;
+  line-height: 30px;
+  border-bottom: 1px solid #ddd;
+}
+td.action {
+  padding: 10px 10px;
+}
+td.action {
+  width: 50px;
+}
+
+.list .title {
+  text-align: center;
+}
+
+a {
+  color: #1d9d74;
+}
+
+.nav-search {
+  margin-top: 50px;
+  line-height: 24px;
+}
+
+.nav-search .nav-search-input {
+  border: 1px solid #6FB3E0;
+  width: 189px;
+  height: 28px !important;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 4px !important;
+  font-size: 13px;
+  color: #666 !important;
+  z-index: 11;
+  -webkit-transition: width ease .15s;
+  transition: width ease .15s;
+}
+
+.nav-search .nav-search-input:focus, .nav-search .nav-search-input:hover {
+  border-color: #6FB3E0;
+}
+
+input[type="text"]:focus, textarea:focus, input[type="submit"]:focus {
+  background-color: #fff;
+  outline: none;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+span.input-icon {
+  display: inline-block;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon>input {
+  padding-left: 24px;
+  padding-right: 6px;
+}
+
+.input-icon>.ace-icon {
+  z-index: 2;
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 3px;
+  display: inline-block;
+}
+
+.nav-search .nav-search-icon {
+  color: #6FB3E0 !important;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-search-icon {
+  border: none;
+  border-radius: 0;
+  padding: 0 3px !important;
+}

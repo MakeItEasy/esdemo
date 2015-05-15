@@ -1,0 +1,32 @@
+<div class="nav-search">
+  <%= form_tag search_laws_path, method: 'get' do %>
+  <span class="input-icon">
+    <%= text_field_tag :q, params[:q], placeholder: "Search ...", autocomplete: "off", class: "nav-search-input" %>
+    <i class="ace-icon fa fa-search nav-search-icon"></i>
+  </span>
+  <% end %>
+</div>
+
+<table>
+  <tr>
+    <th class="index title">Title</th>
+    <th class="content">Content</th>
+  </tr>
+  <% @laws.each do |law| %>
+    <tr class="list">
+      <td class="title"><%= law.title %></td>
+      <td class="content"><%= law.content%></td>
+      <td class="action">
+        <%= link_to law, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-trash-o delete-law"></i>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<div class="new-law">
+  <%= link_to new_law_path do %>
+    <i class="fa fa-user"> New Law</i>
+  <% end %>
+</div>
