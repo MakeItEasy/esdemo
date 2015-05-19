@@ -48,14 +48,6 @@ pickle-email-*.html
 *.*~
 *.bak
 
-# ignore database setting file
-/config/database.*
-
-/config/secrets.yml
-/Capfile
-/config/deploy.rb
-/config/deploy/
-
 # ignore seeds file
 /db/seeds.rb
 /db/seeds.*
